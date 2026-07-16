@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+     *{
+        margin:0;
+        padding:0;
+    }
+    .head{
+        height: 50px;
+        width: 100%;
+        background-color: rgb(195, 239, 238);
+      
+        z-index: 999;
+    }
+    .image{
+        height: 90px;
+        width:90px;
+        margin-top: 0px;
+        margin-bottom: -30px;
+        
+    }
+    .nav-size{
+        font-size: 20px;
+        position: fixed;
+        width: 100%;
+    }
+    .img1 img{
+        height:775px;
+        width: 1520px;
+    }
+    .img2 img{
+        height:250px;
+        width: 1520px;
+    }
+    .img3 img{
+        height:650px;
+        width: 1520px;
+    }
+     .inside{
+        height: 32px;
+        width:239px;
+        background-color: yellow;
+        position: absolute;
+        top:219px;
+        left:0px;
+        border-radius:0px 0px 20px 20px ;
+    }
+    .inside p{
+      text-align: center;
+    }
+    .box{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    .card{
+      width: 15rem;
+  font-size: 20px;
+  border-radius: 10%;
+ 
+}
+.card-img-top{
+      height: 250px;
+      
+      border-radius: 10%;
+    }
+.strike{
+    text-decoration: line-through;
+}
+.img4{
+    height:400px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 30px 30px 30px 30px;
+    
+}
+.img4 img{
+    height:400px;
+    width: 1300px;
+
+    border-radius: 30px 30px 30px 30px;
+    
+}
+
+.img5 img{
+    height:775px;
+        width: 1520px;
+}
+
+.foot1 img {
+      height: 100px;
+      width: 150px;
+    }
+
+    .foot2 ul li {
+      list-style: none;
+    }
+    </style>
+</head>
+<body>
+     <div class="head pt-2 " style="text-align: center;">
+    <p>Get Extra 5% Off On Prepaid Orders | Code: PAYDAY |<a href="#">Read More</a>
+    </p>
+
+
+    <div class="nav-size">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand image me-5"><img src="boat logo.svg" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Daily Deals</a></li>
+                  <li><a class="dropdown-item" href="#">Blogs</a></li>
+                  <li><a class="dropdown-item" href="#">Refer & Earn</a></li>
+                  <li><a class="dropdown-item" href="#">Careers</a></li>
+                  <li><a class="dropdown-item" href="#">Store Locator</a></li>
+                  <li><a class="dropdown-item" href="#">boAt Community</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="boatpersonalisation.html">Boat Personalisation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Corporate Orders</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="boatgift.html">Gifting</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Daily Deals</a></li>
+                  <li><a class="dropdown-item" href="#">Blogs</a></li>
+                  <li><a class="dropdown-item" href="#">Refer & Earn</a></li>
+                  <li><a class="dropdown-item" href="#">Careers</a></li>
+                  <li><a class="dropdown-item" href="#">Store Locator</a></li>
+                  <li><a class="dropdown-item" href="#">boAt Community</a></li>
+                </ul>
+              </li>
+
+            </ul>
+            <p><i class="fa-brands fa-searchengin mt-4"></i></p>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn" type="submit"><i class="fa-solid fa-bag-shopping"></i></button>
+
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                data-bs-whatever="@mdo"><i class="fa-regular fa-user"></i></button>
+
+              <!-- login form -->
+              <div class="modal fade" id="exampleModal" data-bs-backdrop="false" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Sign in/Register</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="recipient-name" class="col-form-label">Name:</label>
+                          <input type="text" class="form-control" id="user-name">
+                        </div>
+                        <div class="mb-3">
+                          <label for="recipient-name" class="col-form-label">Contact:</label>
+                          <input type="text" class="form-control" id="Contact">
+                        </div>
+
+                        <div class="row">
+                          <div class="col-6 mb-3">
+                            <label class="col-form-label">Email:</label>
+                            <input type="email" class="form-control" id="email">
+                          </div>
+                          <div class="col-6 mb-3">
+                            <label class="col-form-label">Password:</label>
+                            <input type="password" class="form-control" id="password">
+                          </div>
+                        </div>
+
+
+
+                        <div class="mb-3">
+                          <label for="message-text" class="col-form-label">Address:</label>
+                          <textarea class="form-control" id="Address"></textarea>
+                        </div>
+                        <div class="mb-3">
+
+                          <input type="checkbox" /> check me out
+                        </div>
+
+
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Sign Up</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- login form -->
+
+
+              <div class="modal" tabindex="-1" id="loginbutton">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+<div class="img1 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex flex-wrap:wrap">
+    <img style="height: 650px;width: 100%;" src="https://www.boat-lifestyle.com/cdn/shop/files/gifting-banner-desk.png?v=1733997327" class="img-fluid " />
+</div>
+
+<div class="img2 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex flex-wrap:wrap">
+    <img src="https://www.boat-lifestyle.com/cdn/shop/files/Mask_group_67ab434d-6a96-41c3-875a-7170fa224f29_2000x.png?v=1734428239"  class="img-fluid "/>
+</div>
+<div class="img3 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex flex-wrap:wrap">
+    <img src="https://www.boat-lifestyle.com/cdn/shop/files/Gift-With-boAt_WEB_copy_5f3a452e-8f81-4cc3-a4ef-9d479e8f9f63_1440x.gif?v=1733999495"  class="img-fluid "/>
+</div>
+
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand p-4"> Gifting <u><b>Deals</b></u></a>
+    <form class="d-flex" role="search">
+      
+      <button class="btn" type="submit"><a href="#">View More<i class="fa-regular fa-circle-right"></i></a></button>
+    </form>
+  </div>
+</nav>
+
+<ul class="nav nav-tabs" style="padding: 30px;margin: 10px;">
+  <li class="nav-item select">
+    <a class="nav-link active text-dark" style="background-color: rgb(209, 207, 207);border-radius: 20px;" aria-current="page" >All Deals</a>
+  </li>
+  <li class="nav-item select">
+    <a class="nav-link  text-dark" aria-current="page" >True Wireless Earphone</a>
+  </li>
+  <li class="nav-item select">
+    <a class="nav-link text-dark " aria-current="page" >Smart Watches</a>
+  </li>
+  <li class="nav-item select">
+    <a class="nav-link text-dark " aria-current="page" >Speakers</a>
+  </li>
+  
+  <li class="nav-item select ">
+    <a class="nav-link text-dark">Neckbands and Headphones</a>
+  </li>
+ 
+</ul>
+
+<div class="box">
+<div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+<div>
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz_110.jpg?v=1698387127&width=200" class="card-img-top cardimg" alt="...">
+
+  <div class="inside">
+    <p>40 hours playback</p>
+  </div>
+</div>
+  
+  <div class="card-body">
+    <h5 class="card-title">boAt Airpods 161</h5>
+    <div style="border-top: dashed 2px gray;margin-top: 30px;">
+    <p class="card-text ">$999</p>
+    <div >
+         <p class="card-text "><span class="strike">$4.990</span></p>
+        <p class="card-text  text-success">60% off</p></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+<div>
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Wave_Fury.webp?v=1702287204&width=200" class="card-img-top cardimg" alt="...">
+
+  <div class="inside">
+    <p>BT Calling</p>
+  </div>
+</div>
+  
+  <div class="card-body">
+    <h5 class="card-title">boAt Storm Call 3</h5>
+    <div style="border-top: dashed 2px gray;margin-top: 30px;">
+    <p class="card-text ">$1,399</p>
+    <div >
+         <p class="card-text "><span class="strike">$6,999</span></p>
+        <p class="card-text  text-success">84% off</p></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+<div>
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_Alpha_new_colors.png?v=1747634146&width=200" class="card-img-top cardimg" alt="...">
+
+  <div class="inside">
+    <p>50 hours playback</p>
+  </div>
+</div>
+  
+  <div class="card-body">
+    <h5 class="card-title">boAt Airpods Supreme</h5>
+    <div style="border-top: dashed 2px gray;">
+    <p class="card-text ">$1,399</p>
+    <div >
+         <p class="card-text "><span class="strike">$3,490</span></p>
+        <p class="card-text  text-success">77% off</p></div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+<div>
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/701_ANC.png?v=1756381019&width=200" class="card-img-top cardimg" alt="...">
+
+  <div class="inside">
+    <p>12 hours playback</p>
+  </div>
+</div>
+  
+  <div class="card-body">
+    <h5 class="card-title">boAt Stone 350</h5>
+    <div style="border-top: dashed 2px gray;margin-top: 30px;">
+    <p class="card-text ">1,499</p>
+    <div >
+         <p class="card-text "><span class="strike">$7,999</span></p>
+        <p class="card-text  text-success">57% off</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+<div>
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/PB300.jpg?v=1700300890&width=200" class="card-img-top cardimg" alt="...">
+
+  <div class="inside">
+    <p>20000mAh Power Bank</p>
+  </div>
+</div>
+  
+  <div class="card-body">
+    <h5 class="card-title">boAt Energyshroom PB400</h5>
+    <div style="border-top: dashed 2px gray;">
+    <p class="card-text ">$1,699</p>
+    <div >
+         <p class="card-text "><span class="strike">$8,990</span></p>
+        <p class="card-text  text-success">62% off</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+<div>
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz_650_pp_renders_main_banner.124.png?v=1740735495&width=200" class="card-img-top cardimg" alt="...">
+
+  <div class="inside">
+    <p>40 hours playback</p>
+  </div>
+</div>
+  
+  <div class="card-body">
+    <h5 class="card-title">boAt Rockerz 110</h5>
+    <div style="border-top: dashed 2px gray; margin-top: 30px;">
+    <p class="card-text">$899</p>
+    <div >
+        <p class="card-text "><span class="strike">$8.999</span></p>
+        <p class="card-text  text-success">64% off</p></div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="img4 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex flex-wrap:wrap justify-content-center align-items-center m-4">
+  <img  class="img-fluid" src="https://static.vecteezy.com/system/resources/previews/036/367/126/non_2x/valentine-s-day-banner-template-with-heart-shaped-gift-box-golden-text-love-and-love-3d-icons-of-valentine-s-day-poster-or-banner-greetings-and-presents-for-love-or-valentine-s-day-concept-vector.jpg"/>
+ 
+</div>
+
+<nav class="navbar bg-body-tertiary" style="margin-top: 40px;">
+  <div class="container-fluid">
+    <a class="navbar-brand p-4">Choose <u><b>Your Offer</b></u></a>
+    <form class="d-flex" role="search">
+      
+      <button class="btn" type="submit"><a href="#">View More<i class="fa-regular fa-circle-right"></i></a></button>
+    </form>
+  </div>
+  </nav>
+
+  
+<ul class="nav nav-tabs" style="padding: 30px;margin-top: 20px;border-bottom: none;">
+  <li class="nav-item select">
+    <a class="nav-link active text-dark" style="background-color: rgb(209, 207, 207);border-radius: 20px;" aria-current="page" >All Deals</a>
+  </li>
+  <li class="nav-item select">
+    <a class="nav-link  text-dark" aria-current="page" >True Wireless Earphone</a>
+  </li>
+  <li class="nav-item select">
+    <a class="nav-link text-dark " aria-current="page" >Smart Watches</a>
+  </li>
+  <li class="nav-item select">
+    <a class="nav-link text-dark " aria-current="page" >Speakers</a>
+  </li>
+  
+  <li class="nav-item select ">
+    <a class="nav-link text-dark">Neckbands and Headphones</a>
+  </li>
+ 
+</ul>
+
+  <div class="box" >
+<div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+<div>
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz_110.jpg?v=1698387127&width=200" class="card-img-top cardimg" alt="...">
+
+  <div class="inside">
+    <p>60 hours playback</p>
+  </div>
+</div>
+  
+  <div class="card-body">
+    <h5 class="card-title">boAt Rockerz Summit</h5>
+    <div style="border-top: dashed 2px gray;margin-top: 55px;">
+    <p class="card-text p-2">$899</p>
+   <div >
+        <p class="card-text "><span class="strike">$4,999</span></p>
+        <p class="card-text  text-success">73% off</p></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+<div>
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz_195V2_Pro.jpg?v=1697107191&width=200" class="card-img-top cardimg" alt="...">
+
+  <div class="inside">
+    <p>42 Hours Playback</p>
+  </div>
+</div>
+  
+  <div class="card-body">
+    <h5 class="card-title">boAt Rockerz 195V</h5>
+    <div style="border-top: dashed 2px gray;margin-top: 55px;">
+    <p class="card-text p-2">$999</p>
+    <div >
+        <p class="card-text "><span class="strike">$3.499</span></p>
+        <p class="card-text  text-success">59% off</p></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+<div>
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/LR111V2.png?v=1734671283&width=200" class="card-img-top cardimg" alt="...">
+
+  <div class="inside">
+    <p>40 hours playback</p>
+  </div>
+</div>
+  
+  <div class="card-body">
+    <h5 class="card-title">boAt Airpods 111 v2</h5>
+    <div style="border-top: dashed 2px gray;margin-top: 55px;">
+    <p class="card-text p-2">$999</p>
+    <div >
+        <p class="card-text "><span class="strike">$1.999</span></p>
+        <p class="card-text  text-success">61% off</p></div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+<div>
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_Alpha.jpg?v=1688452927&width=200" class="card-img-top cardimg" alt="...">
+
+  <div class="inside">
+    <p>60 hours playback</p>
+  </div>
+</div>
+  
+  <div class="card-body">
+    <h5 class="card-title">boAt Rockerz A</h5>
+    <div style="border-top: dashed 2px gray;margin-top: 55px;">
+    <p class="card-text p-2">$999</p>
+    <div >
+        <p class="card-text "><span class="strike">$2.999</span></p>
+        <p class="card-text  text-success">56% off</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+<div>
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Stormcall_1.webp?v=1709108774&width=200" class="card-img-top cardimg" alt="...">
+
+  <div class="inside">
+    <p>35 Hours Playback</p>
+  </div>
+</div>
+  
+  <div class="card-body">
+    <h5 class="card-title">boAt Storm Cell</h5>
+    <div style="border-top: dashed 2px gray;margin-top: 55px;">
+    <p class="card-text p-2">$799</p>
+    <div >
+        <p class="card-text "><span class="strike">$3.999</span></p>
+        <p class="card-text  text-success">64% off</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+<div>
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Wave_call_2_plus__1.png?v=1759155974&width=200" class="card-img-top cardimg" alt="...">
+
+  <div class="inside">
+    <p>17 hours playback</p>
+  </div>
+</div>
+  
+  <div class="card-body">
+    <h5 class="card-title">boAt Wave Call2 PLus</h5>
+    <div style="border-top: dashed 2px gray; margin-top: 55px;">
+    <p class="card-text p-2">$1,399</p>
+    
+    <div >
+        <p class="card-text "><span class="strike">$2.499</span></p>
+        <p class="card-text  text-success">54% off</p></div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<div class="img5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex flex-wrap:wrap">
+    <img src="https://www.boat-lifestyle.com/cdn/shop/files/Mask_Group_490223_3x_1_a95b282c-3dee-4b48-b6ac-7b38a6fff668_2000x.png?v=1734429633" class="img-fluid"/>
+</div>
+
+
+
+  <!-- Footer -->
+
+  <div class="footer">
+    <div class="container-fluid p-4 ">
+      <div class="row">
+        <div class="foot1 bg-light col-xl-5 col-lg-5 col-md-5">
+          <img class="p-3"
+            src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/boAt_logo_black_830768d4-b3b0-4bef-8d5c-494df9bd6cbc.svg?v=1732875809" />
+          <h1 class="ps-3">Subscribe To Our Mail Alert</h1>
+          <input style="height:42px; width:40%px;border-radius: 13px;text-align: center;border:solid 1px;" type="email"
+            placeholder="Enter Your Email " class="p-2 m-3" />
+
+        </div>
+
+        <div class="foot2 bg-light col-xl-7 col-lg-7 col-md-7">
+          <div class="row">
+            <div class="footlist bg-light col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ">
+              <ul>
+                <li><b>Shop</b></li>
+                <li>True Wireless Earbuds</li>
+                <li>Headphones</li>
+                <li>Wireless Speakers</li>
+                <li>Smart Watches</li>
+                <li>Projectors</li>
+                <li>TRebelMisfit Trimmer</li>
+                <li>Refer & Earn</li>
+
+              </ul>
+            </div>
+            <div class="footlist bg-light col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+              <ul>
+                <li><b>Home</b></li>
+                <li>Dashcam</li>
+                <li>Accessories</li>
+                <li>Wireless airpods</li>
+                <li>Smart Watches</li>
+                <li>Projectors</li>
+                <li>TRebelMisfit Trimmer</li>
+                <li>Refer & Earn</li>
+
+              </ul>
+            </div>
+            <div class="footlist bg-light col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+              <ul>
+                <li><b>Help</b></li>
+                <li>Track Your Order</li>
+                <li>Warranty & Support</li>
+                <li>Return Policy</li>
+                <li>Service Centres</li>
+                <li>Bulk Order</li>
+                <li>Why Buy Direct</li>
+
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Footer End -->
+</body>
+</html>

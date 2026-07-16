@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script>
+    const exampleModal = document.getElementById('exampleModal')
+    if (exampleModal) {
+      exampleModal.addEventListener('show.bs.modal', event => {
+        // Button that triggered the modal
+        const button = event.relatedTarget
+        // Extract info from data-bs-* attributes
+        const recipient = button.getAttribute('data-bs-whatever')
+        // If necessary, you could initiate an Ajax request here
+        // and then do the updating in a callback.
+
+        // Update the modal's content.
+        const modalTitle = exampleModal.querySelector('.modal-title')
+        const modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+        modalTitle.textContent = `New message to ${recipient}`
+        modalBodyInput.value = recipient
+      })
+    }
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .head {
+      height: 50px;
+      width: 100%;
+      background-color: rgb(195, 239, 238);
+      position: fixed;
+      z-index: 999;
+    }
+
+    .image {
+      height: 90px;
+      width: 90px;
+      margin-top: 0px;
+      margin-bottom: -30px;
+
+    }
+
+    .nav-size {
+      font-size: 20px;
+      position: fixed;
+      width: 100%;
+      padding: 0px;
+    }
+
+    .tab {
+      background-color: rgb(190, 246, 228);
+    }
+
+    .left-side {
+      margin-left: 300px;
+    }
+
+    .cardimg {
+      border-radius: 10%;
+    }
+
+    .inside {
+      height: 32px;
+      width: 239px;
+      background-color: yellow;
+      position: absolute;
+      top: 219px;
+      left: 0px;
+      border-radius: 0px 0px 20px 20px;
+    }
+
+    .inside p {
+      text-align: center;
+    }
+
+    .box {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .card {
+      width: 15rem;
+      font-size: 20px;
+      border-radius: 10%;
+
+    }
+
+    .card-img-top {
+      height: 250px;
+    }
+
+    .bar {
+      height: 150px;
+      width: 90%;
+      background-image: url(https://www.boat-lifestyle.com/cdn/shop/files/Strips_a756e689-891e-4459-a006-de3a9dd98014_1600x.png?v=1761645582);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      border-radius: 30px 30px 30px 30px;
+      margin-left: 5%;
+    }
+
+    .select {
+      margin-left: 90px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 20px;
+
+    }
+
+    .categories {
+      display: flex;
+      justify-content: space-evenly;
+
+    }
+
+    .box1 {
+      flex-wrap: wrap;
+      transition: all 3s 0s linear;
+    }
+
+    .box1:hover {
+      transform: scale(1.5);
+
+    }
+
+    .scale {
+      height: 510px;
+      width: 300px;
+    }
+
+    .recent {
+      height: 350px;
+      width: 300px;
+
+    }
+
+    .inner {
+      height: 32px;
+      width: 300px;
+      background-color: yellow;
+      position: absolute;
+      top: 318px;
+      left: 0px;
+      border-radius: 0px 0px 20px 20px;
+    }
+
+    .inner p {
+      text-align: center;
+    }
+
+    
+
+    .celeb img {
+      height: 400px;
+      width: 320px;
+    }
+
+    .lifestyle {
+      height: 100px;
+      width: 320px;
+      background-color: azure;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .info {
+      position: absolute;
+      background-color: aliceblue;
+      height: 150px;
+      width: 350px;
+      top: 500px
+    }
+
+    .info h1 {
+      text-align: center;
+    }
+
+    .info button {
+      margin-left: 120px;
+    }
+
+    .modal-body {
+      background-image: url(https://i.pinimg.com/1200x/da/f2/86/daf286935aafe70d48767d74e0c9bdae.jpg);
+      z-index: 1049;
+    }
+
+    .modal-backdrop {
+      z-index: 1049;
+
+    }
+
+    .inline {
+      height: 90px;
+      width: 470px;
+      margin-bottom: 10px;
+
+    }
+
+    .left {
+      float: left;
+      width: 150px;
+      margin-left: 20px;
+
+
+
+    }
+
+    .right {
+      float: left;
+      width: 150px;
+      margin-left: 80px;
+
+
+    }
+
+    .right input {
+      width: 180px;
+      margin-left: -5px;
+
+    }
+
+    .left input {
+      width: 180px;
+      margin-left: -10px;
+
+    }
+
+    .modal-backdrop.show {
+      opacity: 0.2;
+    }
+
+    .foot1 img {
+      height: 100px;
+      width: 150px;
+    }
+
+    .foot2 ul li {
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="head pt-2 sticky-top" style="text-align: center;">
+    <p>Get Extra 5% Off On Prepaid Orders | Code: PAYDAY |<a href="#">Read More</a>
+    </p>
+
+
+    <div class="nav-size ">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid sticky-top">
+          <a class="navbar-brand image me-5"><img src="boat logo.svg" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Daily Deals</a></li>
+                  <li><a class="dropdown-item" href="#">Blogs</a></li>
+                  <li><a class="dropdown-item" href="#">Refer & Earn</a></li>
+                  <li><a class="dropdown-item" href="#">Careers</a></li>
+                  <li><a class="dropdown-item" href="#">Store Locator</a></li>
+                  <li><a class="dropdown-item" href="#">boAt Community</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="boatpersonalisation.html">Boat Personalisation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Corporate Orders</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="boatgift.html">Gifting</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Daily Deals</a></li>
+                  <li><a class="dropdown-item" href="#">Blogs</a></li>
+                  <li><a class="dropdown-item" href="#">Refer & Earn</a></li>
+                  <li><a class="dropdown-item" href="#">Careers</a></li>
+                  <li><a class="dropdown-item" href="#">Store Locator</a></li>
+                  <li><a class="dropdown-item" href="#">boAt Community</a></li>
+                </ul>
+              </li>
+
+            </ul>
+            <p><i class="fa-brands fa-searchengin mt-4"></i></p>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn" type="submit"><i class="fa-solid fa-bag-shopping"></i></button>
+
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                data-bs-whatever="@mdo"><i class="fa-regular fa-user"></i></button>
+
+              <!-- login form -->
+              <div class="modal fade" id="exampleModal" data-bs-backdrop="false" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Sign in/Register</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="recipient-name" class="col-form-label">Name:</label>
+                          <input type="text" class="form-control" id="user-name">
+                        </div>
+                        <div class="mb-3">
+                          <label for="recipient-name" class="col-form-label">Contact:</label>
+                          <input type="text" class="form-control" id="Contact">
+                        </div>
+
+                        <div class="row">
+                          <div class="col-6 mb-3">
+                            <label class="col-form-label">Email:</label>
+                            <input type="email" class="form-control" id="email">
+                          </div>
+                          <div class="col-6 mb-3">
+                            <label class="col-form-label">Password:</label>
+                            <input type="password" class="form-control" id="password">
+                          </div>
+                        </div>
+
+
+
+                        <div class="mb-3">
+                          <label for="message-text" class="col-form-label">Address:</label>
+                          <textarea class="form-control" id="Address"></textarea>
+                        </div>
+                        <div class="mb-3">
+
+                          <input type="checkbox" /> check me out
+                        </div>
+
+
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Sign Up</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- login form -->
+
+
+              <div class="modal" tabindex="-1" id="loginbutton">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!--Carousel  -->
+  <div id="carouselExample" class="carousel slide col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pt-5 ">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://www.boat-lifestyle.com/cdn/shop/files/payday-gif_d4c27097-f51c-47dc-82c5-a712d0340c2d.gif?v=1777548558"
+          class="d-block w-100 img-fluid" alt="...">
+      </div>
+      <div class="carousel-item active">
+        <img
+          src="https://www.boat-lifestyle.com/cdn/shop/files/personalization_3_4a64740f-155b-4124-a1a0-0756a84bda64.png?v=1766404083"
+          class="d-block w-100 img-fluid" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://www.boat-lifestyle.com/cdn/shop/files/Artboard_1_1_70ac5c27-f030-49ff-82f0-f6897a925e95.png?v=1766050568"
+          class="d-block w-100 img-fluid" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://www.boat-lifestyle.com/cdn/shop/files/Artboard_2_d309b4c9-df24-4347-afec-a4b13083c680.png?v=1775036729"
+          class="d-block w-100 img-fluid" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Tab -->
+  <div class="tab">
+    <div class="container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+
+      <div class="row">
+        <div class="tab1 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 d-flex">
+          <div class="symbol ">
+            <img style="height:80px;width: 60px;"
+              src="https://www.boat-lifestyle.com/cdn/shop/files/jshf_2-01-final-01_small.svg?v=1744365804" />
+          </div>
+          <div class="detail pt-3">
+            <p>12+3 Months<br> Warranty</p>
+          </div>
+        </div>
+
+        <div class="tab1 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 d-flex">
+          <div class="symbol">
+            <img src="tab2.svg" />
+          </div>
+          <div class="detail pt-3">
+            <p>GST<br>Billing</p>
+          </div>
+        </div>
+
+        <div class="tab1 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 d-flex">
+          <div class="symbol">
+            <img src="tab3.svg" />
+          </div>
+          <div class="detail pt-3">
+            <p>Free Express<br>Delivery</p>
+          </div>
+        </div>
+
+        <div class="tab1 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 d-flex">
+          <div class="symbol ">
+            <img src="tab4.svg" />
+          </div>
+          <div class="detail pt-3">
+            <p>7 days<br>Replacement</p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+  <!-- Tab End -->
+  <nav class="navbar bg-body-tertiary col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <div class="container-fluid">
+      <a class="navbar-brand p-4" style="font-size:30px">Sale <u><b>is Live</b></u></a>
+      <form class="d-flex" role="search">
+
+        <button class="btn" type="submit"><a href="#">View More<i class="fa-regular fa-circle-right"></i></a></button>
+      </form>
+    </div>
+  </nav>
+
+
+
+  <div class="box">
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_161.png?v=1745235467&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>40 hours playback</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Airpods 161</h5>
+        <div style="border-top: dashed 2px gray;margin-top: 30px;">
+          <p class="card-text p-2">$999</p>
+          <a href="#" class="card-text p-2">60% off</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_Call_3.jpg?v=1712640243&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>BT Calling</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Storm Call 3</h5>
+        <div style="border-top: dashed 2px gray;margin-top: 30px;">
+          <p class="card-text p-2">$1,399</p>
+          <a href="#" class="card-text p-2">84% off</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_Supreme_1.jpg?v=1711262453&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>50 hours playback</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Airpods Supreme</h5>
+        <div style="border-top: dashed 2px gray;">
+          <p class="card-text p-2">$1,399</p>
+          <a href="#" class="card-text p-2">77% off</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/1_fdcbadf5-5d2d-4ce3-9018-ee3e535fb60b.png?v=1745236290&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>12 hours playback</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Stone 350</h5>
+        <div style="border-top: dashed 2px gray;margin-top: 30px;">
+          <p class="card-text p-2">1,499$</p>
+          <a href="#" class="card-text p-2">57% off</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/PB400_628ae039-11be-4f0b-b723-651e2bb05de7.jpg?v=1700300890&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>20000mAh Power Bank</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Energyshroom PB400</h5>
+        <div style="border-top: dashed 2px gray;">
+          <p class="card-text p-2">$1,699</p>
+          <a href="#" class="card-text p-2">62% off</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz_110.jpg?v=1698387127&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>40 hours playback</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Rockerz 110</h5>
+        <div style="border-top: dashed 2px gray; margin-top: 30px;">
+          <p class="card-text p-2">$899</p>
+          <a href="#" class="card-text p-2">64% off</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar bg-body-tertiary ">
+    <div class="container-fluid col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <a class="navbar-brand p-4 ">Explore <u><b>Nirvana</b></u></a>
+      <form class="d-flex" role="search">
+
+        <button class="btn" type="submit"><a href="#">View More<i class="fa-regular fa-circle-right"></i></a></button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex flex-wrap align-items-center">
+    <div class="bar col-xl-12 col-lg-12 col-md-12 col-sm-12 img-fluid"></div>
+  </div>
+
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <a class="navbar-brand p-4"> Big <u><b>Deals</b></u></a>
+      <form class="d-flex" role="search">
+
+        <button class="btn" type="submit"><a href="#">View More<i class="fa-regular fa-circle-right"></i></a></button>
+      </form>
+    </div>
+  </nav>
+
+  <ul class="nav nav-tabs p-4 d-flex flex-wrap align-items-center">
+    <li class="nav-item select">
+      <a class="nav-link active text-dark" style="background-color: rgb(209, 207, 207);border-radius: 20px;"
+        aria-current="page">All Deals</a>
+    </li>
+    <li class="nav-item select">
+      <a class="nav-link  text-dark" aria-current="page">True Wireless Earphone</a>
+    </li>
+    <li class="nav-item select">
+      <a class="nav-link text-dark " aria-current="page">Smart Watches</a>
+    </li>
+    <li class="nav-item select">
+      <a class="nav-link text-dark " aria-current="page">Speakers</a>
+    </li>
+
+    <li class="nav-item select ">
+      <a class="nav-link text-dark">Neckbands and Headphones</a>
+    </li>
+
+  </ul>
+
+  <div class="box">
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz_110.jpg?v=1698387127&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>40 hours playback</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Airpods 161</h5>
+        <div style="border-top: dashed 2px gray;margin-top: 30px;">
+          <p class="card-text p-2">$999</p>
+          <a href="#" class="card-text p-2">60% off</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Wave_Fury.webp?v=1702287204&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>BT Calling</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Storm Call 3</h5>
+        <div style="border-top: dashed 2px gray;margin-top: 30px;">
+          <p class="card-text p-2">$1,399</p>
+          <a href="#" class="card-text p-2">84% off</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_Alpha_new_colors.png?v=1747634146&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>50 hours playback</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Airpods Supreme</h5>
+        <div style="border-top: dashed 2px gray;">
+          <p class="card-text p-2">$1,399</p>
+          <a href="#" class="card-text p-2">77% off</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/701_ANC.png?v=1756381019&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>12 hours playback</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Stone 350</h5>
+        <div style="border-top: dashed 2px gray;margin-top: 30px;">
+          <p class="card-text p-2">1,499</p>
+          <a href="#" class="card-text p-2">57% off</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/PB300.jpg?v=1700300890&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>20000mAh Power Bank</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Energyshroom PB400</h5>
+        <div style="border-top: dashed 2px gray;">
+          <p class="card-text p-2">$1,699</p>
+          <a href="#" class="card-text p-2">62% off</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz_650_pp_renders_main_banner.124.png?v=1740735495&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>40 hours playback</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Rockerz 110</h5>
+        <div style="border-top: dashed 2px gray; margin-top: 30px;">
+          <p class="card-text p-2">$899</p>
+          <a href="#" class="card-text p-2">64% off</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categories -->
+
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <a class="navbar-brand p-4">Shop <u><b>by Categories</b></u></a>
+      <form class="d-flex" role="search">
+
+        <button class="btn" type="submit"><a href="#">View More<i class="fa-regular fa-circle-right"></i></a></button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="categories col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex flex-wrap">
+
+    <div class="box1">
+      <div class="up">
+        <img src="https://www.boat-lifestyle.com/cdn/shop/files/True-wireless-earbuds_small.png?v=1684842854" />
+      </div>
+      <div class="down">
+        <p>True Wieless<br> Earbuds</p>
+      </div>
+    </div>
+
+
+    <div class="box1">
+      <div class="up">
+        <img
+          src="https://www.boat-lifestyle.com/cdn/shop/files/Neckbands_bc6343f4-622f-4ebd-bb36-205643c3bf78_small.png?v=1684842854" />
+      </div>
+      <div class="down">
+        <p>Neckbands</p>
+      </div>
+    </div>
+
+
+    <div class="box1">
+      <div class="up">
+        <img
+          src="https://www.boat-lifestyle.com/cdn/shop/files/Smartwatches_88f12bcf-24bd-4e3a-aacb-ecc204f62179_small.png?v=1684842853" />
+      </div>
+      <div class="down">
+        <p>Smart Watches</p>
+      </div>
+    </div>
+
+
+    <div class="box1">
+      <div class="up">
+        <img
+          src="https://www.boat-lifestyle.com/cdn/shop/files/nirvana_52689447-c1bb-4bb8-8fa0-0496e3715fc0_small.png?v=1727229889" />
+      </div>
+      <div class="down">
+        <p>Nirvana</p>
+      </div>
+    </div>
+
+
+    <div class="box1">
+      <div class="up">
+        <img src="https://www.boat-lifestyle.com/cdn/shop/files/Wireless-Speaker_small.png?v=1684842854" />
+      </div>
+      <div class="down">
+        <p>Speaker</p>
+      </div>
+    </div>
+
+
+    <div class="box1">
+      <div class="up">
+        <img src="https://www.boat-lifestyle.com/cdn/shop/files/Wireless-Headphones_small.png?v=1684842854" />
+      </div>
+      <div class="down">
+        <p>Wireless<br> Headphones</p>
+      </div>
+    </div>
+
+
+    <div class="box1">
+      <div class="up">
+        <img src="https://www.boat-lifestyle.com/cdn/shop/files/100x100_small.png?v=1769063407" />
+      </div>
+      <div class="down">
+        <p>Dash Cams</p>
+      </div>
+    </div>
+
+  </div>
+  <!-- Categories End -->
+
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand p-4">Top picks<u><b>For You</b></u></a>
+      <form class="d-flex" role="search">
+
+        <button class="btn" type="submit"><a href="#">View More<i class="fa-regular fa-circle-right"></i></a></button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="d-grid gap-2 d-md-block mt-3 mb-3 container-fluid">
+    <button class="btn btn-light text-dark " style="border-radius: 20px 20px 20px 20px ;" type="button">New
+      launches</button>
+    <button class="btn btn-light text-dark " style="border-radius:20px 20px 20px 20px ;"
+      type="button">Personalisation</button>
+  </div>
+
+
+  <div class="box">
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/lifestyle_bc883e2b-a578-4e6b-b409-36d488dc72e3.png?v=1776679343&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>700W Powerful Sound</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Aavante Prime X</h5>
+        <div style="border-top: dashed 2px gray;margin-top: 55px;">
+          <p class="card-text p-2">$37,999</p>
+          <a href="#" class="card-text p-2">62% off</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Projector_M1_Lifestyle.png?v=1776617056&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>200 ANSL Lumens</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Cinehead M1</h5>
+        <div style="border-top: dashed 2px gray;margin-top: 55px;">
+          <p class="card-text p-2">$10,999</p>
+          <a href="#" class="card-text p-2">63% off</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Projector_E1_Lifestyle.png?v=1776594886&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>200 ANSL Lumens</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Cinehead E1</h5>
+        <div style="border-top: dashed 2px gray; margin-top: 55px;">
+          <p class="card-text p-2">$7,499</p>
+          <a href="#" class="card-text p-2">50% off</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Ultima_Aeris_Lifestyle.png?v=1776355584&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>AMOLED Display</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Ultima Aeris</h5>
+        <div style="border-top: dashed 2px gray;margin-top: 55px;">
+          <p class="card-text p-2">2,799$</p>
+          <a href="#" class="card-text p-2">57% off</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/LI_0641be6e-48c1-4c48-b9a4-bdd369d78969.png?v=1776158583&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>4800mAh Battery</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Energyshroom Magnacharge Air</h5>
+        <div style="border-top: dashed 2px gray;margin-top: 30px;">
+          <p class="card-text p-2">$1,599</p>
+          <a href="#" class="card-text p-2">68% off</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card " style="width: 15rem; font-size: 20px;  border-radius: 10%;">
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/65w_gan_charger_lifestyle.png?v=1776158252&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>65W Fast Charging</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt 65W GaN Nano Charger</h5>
+        <div style="border-top: dashed 2px gray; margin-top: 30px;">
+          <p class="card-text p-2">$1,999</p>
+          <a href="#" class="card-text p-2">50% off</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand p-4">Recently<u><b>Viewed</b></u></a>
+      <form class="d-flex" role="search">
+
+        <button class="btn" type="submit"><a href="#">View More<i class="fa-regular fa-circle-right"></i></a></button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="box">
+    <div class="card scale" style=" font-size: 20px; border-radius: 10%;">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz_110.jpg?v=1698387127&width=200"
+          class="card-img-top cardimg recent" alt="...">
+
+        <div class="inner">
+          <p>700W Powerful Sound</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Aavante Prime X</h5>
+        <div style="border-top: dashed 2px gray;">
+          <p class="card-text p-2">$37,999</p>
+          <a href="#" class="btn btn-dark container">ADD TO CART</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card scale" style=" font-size: 20px; border-radius: 10%;">
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/PB400_628ae039-11be-4f0b-b723-651e2bb05de7.jpg?v=1700300890&width=200"
+          class="card-img-top cardimg recent" alt="...">
+
+        <div class="inner">
+          <p>200 ANSL Lumens</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Cinehead M1</h5>
+        <div style="border-top: dashed 2px gray;">
+          <p class="card-text p-2">$10,999</p>
+          <a href="#" class="btn btn-dark container">VIEW MORE</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card scale " style=" font-size: 20px; border-radius: 10%;">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_Call_3.jpg?v=1712640243&width=200"
+          class="card-img-top cardimg recent" alt="...">
+
+        <div class="inner">
+          <p>200 ANSL Lumens</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Cinehead E1</h5>
+        <div style="border-top: dashed 2px gray; ">
+          <p class="card-text p-2">$7,499</p>
+          <a href="#" class="btn btn-dark container">ADD TO CART</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand p-4">Shop <u><b>by LifeStyle</b></u></a>
+      <form class="d-flex" role="search">
+
+        <button class="btn" type="submit"><a href="#">View More<i class="fa-regular fa-circle-right"></i></a></button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- LifeStyle -->
+  <div
+    class="main ps-5 container-fluid col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex flex-wrap ">
+    <div class="mainbox col-xl-3 col-lg-5 col-md-6 col-sm-12 col-12 ps-2">
+      <div class="celeb">
+        <img
+          src="https://www.boat-lifestyle.com/cdn/shop/files/jemmi_d1dd51d5-8b8b-47ad-9920-f8594669cbb2_429X322.png?v=1726059408"
+          class="img-fluid" />
+      </div>
+      <div class="lifestyle">
+        <h3>For Fitness</h3>
+        <button class="btn" type="submit"><a href="#">View More<i class="fa-regular fa-circle-right"></i></a></button>
+      </div>
+    </div>
+    <div class="mainbox col-xl-3 col-lg-5 col-md-6 col-sm-12 col-12 ps-3">
+      <div class="celeb">
+        <img src="https://www.boat-lifestyle.com/cdn/shop/files/Ranveer_429X322.png?v=1726038549" class="img-fluid" />
+      </div>
+      <div class="lifestyle">
+        <h3>For Parties</h3>
+        <button class="btn" type="submit"><a href="#">View More<i class="fa-regular fa-circle-right"></i></a></button>
+      </div>
+    </div>
+    <div class="mainbox col-xl-3 col-lg-5 col-md-6 col-sm-12 col-12 ps-3">
+      <div class="celeb">
+        <img src="https://www.boat-lifestyle.com/cdn/shop/files/Aman_429X322.png?v=1726038424" class="img-fluid" />
+      </div>
+      <div class="lifestyle">
+        <h3>For Audiophiles</h3>
+        <button class="btn" type="submit"><a href="#">View More<i class="fa-regular fa-circle-right"></i></a></button>
+      </div>
+    </div>
+    <div class="mainbox col-xl-3 col-lg-5 col-md-6 col-sm-12 col-12 ps-3">
+      <div class="celeb">
+        <img src="https://www.boat-lifestyle.com/cdn/shop/files/YJ_429X322.png?v=1726059363" class="img-fluid" />
+      </div>
+      <div class="lifestyle">
+        <h3>For Work</h3>
+        <button class="btn" type="submit"><a href="#">View More<i class="fa-regular fa-circle-right"></i></a></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LifeStyle End -->
+
+  <nav class="navbar bg-body-tertiary mt-5">
+    <div class="container-fluid">
+      <a class="navbar-brand p-4">Best <u><b>of boAt</b></u></a>
+      <form class="d-flex" role="search">
+
+        <button class="btn" type="submit"><a href="#">View More<i class="fa-regular fa-circle-right"></i></a></button>
+      </form>
+    </div>
+  </nav>
+
+
+  <ul class="nav nav-tabs" style="padding: 30px;margin-top: 20px;border-bottom: none;">
+    <li class="nav-item select">
+      <a class="nav-link active text-dark" style="background-color: rgb(209, 207, 207);border-radius: 20px;"
+        aria-current="page">All Deals</a>
+    </li>
+    <li class="nav-item select">
+      <a class="nav-link  text-dark" aria-current="page">True Wireless Earphone</a>
+    </li>
+    <li class="nav-item select">
+      <a class="nav-link text-dark " aria-current="page">Smart Watches</a>
+    </li>
+    <li class="nav-item select">
+      <a class="nav-link text-dark " aria-current="page">Speakers</a>
+    </li>
+
+    <li class="nav-item select ">
+      <a class="nav-link text-dark">Neckbands and Headphones</a>
+    </li>
+
+  </ul>
+
+  <div class="box">
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/131_f04f74fd-45d4-4614-85cf-6ccf69c4cf90.jpg?v=1691395049&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>60 hours playback</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Airpods 131</h5>
+        <div style="border-top: dashed 2px gray;margin-top: 55px;">
+          <p class="card-text p-2">$899</p>
+          <a href="#" class="card-text p-2">70% off</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/141_ls.jpg?v=1741083860&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>42 Hours Playback</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Airpods 141</h5>
+        <div style="border-top: dashed 2px gray;margin-top: 55px;">
+          <p class="card-text p-2">$999</p>
+          <a href="#" class="card-text p-2">78% off</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_161.png?v=1745235467&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>40 hours playback</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Airpods 161</h5>
+        <div style="border-top: dashed 2px gray;margin-top: 55px;">
+          <p class="card-text p-2">$999</p>
+          <a href="#" class="card-text p-2">60% off</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/r255pro_55d805bc-f2e1-4861-9533-8eee57081305.jpg?v=1682573437&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>60 hours playback</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Rockerz 255 pro+</h5>
+        <div style="border-top: dashed 2px gray;margin-top: 30px;">
+          <p class="card-text p-2">$999</p>
+          <a href="#" class="card-text p-2">75% off</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_Alpha_new_colors.png?v=1747634146&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>35 Hours Playback</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Airpod Alpha</h5>
+        <div style="border-top: dashed 2px gray;margin-top: 55px;">
+          <p class="card-text p-2">$799</p>
+          <a href="#" class="card-text p-2">77% off</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card " style="width: 15rem; font-size: 20px; border-radius: 10%;">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Airdopes-163.jpg?v=1682408982&width=200"
+          class="card-img-top cardimg" alt="...">
+
+        <div class="inside">
+          <p>17 hours playback</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">boAt Airpods 163</h5>
+        <div style="border-top: dashed 2px gray; margin-top: 55px;">
+          <p class="card-text p-2">$1,399</p>
+          <a href="#" class="card-text p-2">44% off</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <div class="footer">
+    <div class="container-fluid p-4 ">
+      <div class="row">
+        <div class="foot1 bg-light col-xl-5 col-lg-5 col-md-5">
+          <img class="p-3"
+            src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/boAt_logo_black_830768d4-b3b0-4bef-8d5c-494df9bd6cbc.svg?v=1732875809" />
+          <h1 class="ps-3">Subscribe To Our Mail Alert</h1>
+          <input style="height:42px; width:40%px;border-radius: 13px;text-align: center;border:solid 1px;" type="email"
+            placeholder="Enter Your Email " class="p-2 m-3" />
+
+        </div>
+
+        <div class="foot2 bg-light col-xl-7 col-lg-7 col-md-7">
+          <div class="row">
+            <div class="footlist bg-light col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ">
+              <ul>
+                <li><b>Shop</b></li>
+                <li>True Wireless Earbuds</li>
+                <li>Headphones</li>
+                <li>Wireless Speakers</li>
+                <li>Smart Watches</li>
+                <li>Projectors</li>
+                <li>TRebelMisfit Trimmer</li>
+                <li>Refer & Earn</li>
+
+              </ul>
+            </div>
+            <div class="footlist bg-light col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+              <ul>
+                <li><b>Home</b></li>
+                <li>Dashcam</li>
+                <li>Accessories</li>
+                <li>Wireless airpods</li>
+                <li>Smart Watches</li>
+                <li>Projectors</li>
+                <li>TRebelMisfit Trimmer</li>
+                <li>Refer & Earn</li>
+
+              </ul>
+            </div>
+            <div class="footlist bg-light col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+              <ul>
+                <li><b>Help</b></li>
+                <li>Track Your Order</li>
+                <li>Warranty & Support</li>
+                <li>Return Policy</li>
+                <li>Service Centres</li>
+                <li>Bulk Order</li>
+                <li>Why Buy Direct</li>
+
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Footer End -->
+
+</body>
+
+</html>
